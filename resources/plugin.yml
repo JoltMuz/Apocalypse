@@ -1,0 +1,13 @@
+name: Apocalypse
+main: io.github.JoltMuz.Apocalypse.Main
+version: 1.0
+author: JoltTheBolt
+description: A plugin for Apocalypse event.
+commands:
+  apocalypse:
+    description: The commands for apolcapse event.
+    usage: /apocalypse ?
+  points:
+    description: The commands for apolcapse event.
+    usage: /points
+    aliases: lb

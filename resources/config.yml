@@ -1,0 +1,210 @@
+#If plugin keeps disabling, delete the config and restart :D
+
+# The world for event and area in x and z for the event.
+world_name: world
+min_x: -75
+min_z: -75
+max_x: 75
+max_z: 75
+# How many points should reward a candy
+points_to_candy: 20
+# The number of waves and their properties
+waves:
+  1:
+    size: 75
+    mob_health: 20
+    mob_types:
+      - SKELETON
+      - ZOMBIE
+      - SKELETON
+      - SKELETON
+    helmets:
+      - AIR
+      - LEATHER_HELMET
+    chestplates:
+      - AIR
+      - LEATHER_CHESTPLATE
+    leggings:
+      - AIR
+      - LEATHER_LEGGINGS
+    boots:
+      - AIR
+      - LEATHER_BOOTS
+    swords:
+      - WOOD_SWORD
+      - STONE_SWORD
+      - BOW
+  2:
+    size: 110
+    mob_health: 25
+    mob_types:
+      - SKELETON
+      - ZOMBIE
+    helmets:
+      - CHAINMAIL_HELMET
+      - CHAINMAIL_HELMET
+      - CHAINMAIL_HELMET
+      - CHAINMAIL_HELMET PROTECTION_ENVIRONMENTAL:1
+    chestplates:
+      - CHAINMAIL_CHESTPLATE
+    leggings:
+      - CHAINMAIL_LEGGINGS
+    boots:
+      - CHAINMAIL_BOOTS
+    swords:
+      - STONE_SWORD
+      - STONE_SWORD
+      - IRON_SWORD
+  3:
+    size: 160
+    mob_health: 25
+    mob_types:
+      - SKELETON
+      - ZOMBIE
+      - SPIDER
+    helmets:
+      - GOLD_HELMET
+      - IRON_HELMET
+      - IRON_HELMET PROTECTION_ENVIRONMENTAL:1
+    chestplates:
+      - GOLD_CHESTPLATE
+      - IRON_CHESTPLATE
+      - CHAINMAIL_CHESTPLATE
+      - IRON_CHESTPLATE PROTECTION_ENVIRONMENTAL:1
+      - CHAINMAIL_CHESTPLATE PROTECTION_ENVIRONMENTAL:1
+    leggings:
+      - GOLD_LEGGINGS
+      - CHAINMAIL_LEGGINGS PROTECTION_ENVIRONMENTAL:1
+      - IRON_LEGGINGS PROTECTION_ENVIRONMENTAL:1
+    boots:
+      - GOLD_BOOTS
+      - CHAINMAIL_BOOTS PROTECTION_ENVIRONMENTAL:1
+      - IRON_BOOTS PROTECTION_ENVIRONMENTAL:1
+    swords:
+      - IRON_SWORD
+      - IRON_SWORD 
+      - STONE_SWORD
+      - STONE_SWORD
+      
+  4:
+    size: 150
+    mob_health: 30
+    mob_types:
+      - SKELETON
+      - ZOMBIE
+      - SPIDER
+      - SKELETON
+      - ZOMBIE
+      - SPIDER
+      - SKELETON
+      - ZOMBIE
+      - SPIDER
+      - SKELETON
+      - ZOMBIE
+      - SPIDER
+      - CREEPER
+    helmets:
+      - IRON_HELMET PROTECTION_ENVIRONMENTAL:1
+    chestplates:
+      - IRON_CHESTPLATE PROTECTION_ENVIRONMENTAL:1
+    leggings:
+      - IRON_LEGGINGS PROTECTION_ENVIRONMENTAL:1
+    boots:
+      - IRON_BOOTS PROTECTION_ENVIRONMENTAL:1
+    swords:
+      - IRON_SWORD DAMAGE_ALL:1
+  5:
+    size: 175
+    mob_health: 30
+    mob_types:
+      - SKELETON
+      - ZOMBIE
+      - SPIDER
+      - CAVE_SPIDER
+      - 
+    helmets:
+      - IRON_HELMET PROTECTION_ENVIRONMENTAL:1
+      - DIAMOND_HELMET
+      - DIAMOND_HELMET PROTECTION_ENVIRONMENTAL:1
+    chestplates:
+      - IRON_CHESTPLATE PROTECTION_ENVIRONMENTAL:1
+      - DIAMOND_CHESTPLATE
+      - DIAMOND_CHESTPLATE PROTECTION_ENVIRONMENTAL:1
+    leggings:
+      - IRON_LEGGINGS PROTECTION_ENVIRONMENTAL:1
+      - DIAMOND_LEGGINGS
+      - DIAMOND_LEGGINGS PROTECTION_ENVIRONMENTAL:1
+    boots:
+      - IRON_BOOTS PROTECTION_ENVIRONMENTAL:1
+      - DIAMOND_BOOTS 
+      - DIAMOND_BOOTS PROTECTION_ENVIRONMENTAL:1
+    swords:
+      - IRON_SWORD DAMAGE_ALL:1
+      - DIAMOND_SWORD DAMAGE_ALL:1
+      - DIAMOND_SWORD
+
+# Shop Inventory GUI Size: Must be a multiple of 9
+shop_size: 45
+shop:
+  swords:
+  #Slot for chests, starts at 0
+    slot: 11
+    display_name: "&e Sword Upgrade"
+    display_item: IRON_SWORD
+    tiers:
+    # What they will receive after every next purchase, last one can be purchased indefinitely
+    #Format: Price - Item|Enchantment:Level,Enchantment:Level or PotionType:Level
+    # Previous Tier will be removed upon giving the next
+      - 1 - STONE_SWORD
+      - 1 - IRON_SWORD
+      - 2 - DIAMOND_SWORD
+      - 3 - DIAMOND_SWORD|DAMAGE_ALL:1
+      - 4 - DIAMOND_SWORD|DAMAGE_ALL:3
+  armors:
+    slot: 13
+    display_name: "&e Armor Upgrade"
+    display_item: IRON_CHESTPLATE
+    tiers:
+      - 1 - LEATHER_HELMET|PROTECTION_ENVIRONMENTAL:1 LEATHER_CHESTPLATE CHAINMAIL_LEGGINGS CHAINMAIL_BOOTS
+      - 2 - IRON_HELMET|PROTECTION_ENVIRONMENTAL:1 CHAINMAIL_CHESTPLATE CHAINMAIL_LEGGINGS CHAINMAIL_BOOTS
+      - 3 - IRON_HELMET|PROTECTION_ENVIRONMENTAL:1 IRON_CHESTPLATE IRON_LEGGINGS IRON_BOOTS
+      - 4 - DIAMOND_HELMET|PROTECTION_ENVIRONMENTAL:1 IRON_CHESTPLATE DIAMOND_LEGGINGS IRON_BOOTS
+      - 4 - DIAMOND_HELMET|PROTECTION_ENVIRONMENTAL:1 DIAMOND_CHESTPLATE DIAMOND_LEGGINGS DIAMOND_BOOTS
+      - 5 - DIAMOND_HELMET|PROTECTION_ENVIRONMENTAL:1 DIAMOND_CHESTPLATE|PROTECTION_ENVIRONMENTAL:1 DIAMOND_LEGGINGS|PROTECTION_ENVIRONMENTAL:1 DIAMOND_BOOTS|PROTECTION_ENVIRONMENTAL:1
+      - 5 - DIAMOND_HELMET|PROTECTION_ENVIRONMENTAL:2 DIAMOND_CHESTPLATE|PROTECTION_ENVIRONMENTAL:2 DIAMOND_LEGGINGS|PROTECTION_ENVIRONMENTAL:2 DIAMOND_BOOTS|PROTECTION_ENVIRONMENTAL:2
+  bow:
+    slot: 15
+    display_name: "&6 Bow"
+    display_item: BOW|ARROW_INFINITE:1
+    tiers:
+      - 3 - BOW|ARROW_INFINITE:1 ARROW
+      - 3 - BOW|ARROW_INFINITE:1,ARROW_DAMAGE:1 ARROW
+      - 3 - BOW|ARROW_INFINITE:1,ARROW_DAMAGE:2 ARROW
+      - 3 - BOW|ARROW_INFINITE:1,ARROW_DAMAGE:3 ARROW
+      - 6 - BOW|ARROW_INFINITE:1,ARROW_DAMAGE:3,ARROW_KNOCKBACK:2 ARROW
+  apple:
+    slot: 28
+    display_name: "&e Golden Apple"
+    display_item: GOLDEN_APPLE
+    tiers:
+      - 1 - GOLDEN_APPLE
+  pearl:
+    slot: 30
+    display_name: "&2 Ender Peal"
+    display_item: ENDER_PEARL
+    tiers:
+      - 1 - ENDER_PEARL
+  strength:
+    slot: 33
+    display_name: "&e Strength"
+    display_item: STRENGTH:1
+    tiers:
+      - 1 - STRENGTH:1
+  speed:
+    slot: 35
+    display_name: "&b Speed"
+    display_item: SPEED:2
+    tiers:
+      - 1 - SPEED:2
+
+
